@@ -1,15 +1,53 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config";
+import { organizationSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Call Girl Service India | Girlbests",
+  title: "Contact Us | Book Call Girl Service 24/7 | Girlbests",
   description:
-    "Contact Girlbests for escort service inquiries. Available 24/7 by phone and WhatsApp. Fast, discreet response.",
+    "Contact Girlbests to book escort service across India. Call or WhatsApp +91-7061819139 anytime. 24/7 response, instant booking confirmation.",
+  keywords: [
+    "contact girlbests", "book call girl", "call girl number India",
+    "escort service contact", "girlbests whatsapp",
+  ],
+  alternates: { canonical: `${siteConfig.baseUrl}/contact` },
+  openGraph: {
+    title: "Contact Girlbests | Book Call Girl 24/7",
+    description: "Call or WhatsApp +91-7061819139. Instant booking confirmation. 24/7 available.",
+    url: `${siteConfig.baseUrl}/contact`,
+  },
 };
 
+const contactFaqs = [
+  {
+    q: "What is the quickest way to book a call girl?",
+    a: "The fastest way is to WhatsApp us at +91-7061819139. Share your city, area and type of escort needed. We respond within 2 minutes.",
+  },
+  {
+    q: "What information do I need to provide to book?",
+    a: "Just tell us your city, your area or hotel name, your budget and preferred escort type. That is all we need to find your perfect match.",
+  },
+  {
+    q: "Is WhatsApp booking safe and private?",
+    a: "Yes. WhatsApp messages are end-to-end encrypted. We never save client conversations. Everything is 100% private and confidential.",
+  },
+];
+
 export default function ContactPage() {
+  const jsonLdOrg = organizationSchema();
+  const jsonLdFaq = faqSchema(contactFaqs);
+
   return (
-    <section
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      <section
       className="py-10"
       style={{ background: "linear-gradient(135deg,#1a0000 0%,#0d0000 100%)" }}
     >
@@ -85,7 +123,21 @@ export default function ContactPage() {
             100% discreet · Cash payment · Available 24/7 across India
           </p>
         </div>
+
+        {/* FAQ */}
+        <div className="bg-outer rounded-xl p-6 mt-8">
+          <h2 className="text-xl font-bold text-[#ff9900] mb-6">Booking FAQ</h2>
+          <div className="space-y-4">
+            {contactFaqs.map(({ q, a }) => (
+              <div key={q} className="border-b border-[#5e0707]/40 pb-4 last:border-0 last:pb-0">
+                <h3 className="text-white font-bold text-sm mb-1">{q}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
+    </>
   );
 }
