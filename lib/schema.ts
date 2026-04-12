@@ -30,10 +30,7 @@ export function organizationSchema() {
         },
       },
     ],
-    sameAs: [
-      "https://www.facebook.com/",
-      "https://www.instagram.com/",
-    ],
+    sameAs: [],
   };
 }
 
@@ -200,8 +197,9 @@ export function serviceSchema(cityName: string) {
 export function reviewsSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "LocalBusiness",
     name: "Girlbests Escort Service",
+    url: siteConfig.baseUrl,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.8",
@@ -278,6 +276,45 @@ export function getHomepageFaqs() {
       a: "We offer college call girls, independent escorts, Russian and foreign models, VIP high-profile escorts, housewife escorts, model escorts and air hostess companions across India.",
     },
   ];
+}
+
+/* ─── HowTo Schema ──────────────────────────────────────────── */
+export function howToSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Book a Call Girl Service in India",
+    description:
+      "Booking escort service with Girlbests is quick, simple and completely discreet. Follow these 3 easy steps.",
+    totalTime: "PT5M",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Call or WhatsApp Us",
+        text: `Contact us on +91-${siteConfig.phone}. Tell us your city, area, preferred escort type and budget. Available 24/7.`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Choose Your Escort",
+        text: "We share verified profiles matching your preference. All photos are genuine. Select your companion.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "She Arrives at Your Location",
+        text: "Escort reaches your hotel or location within 30–60 minutes. Pay cash on arrival. Enjoy your time.",
+      },
+    ],
+  };
+}
+
+/* ─── Homepage Breadcrumb ───────────────────────────────────── */
+export function homeBreadcrumbSchema() {
+  return breadcrumbSchema([
+    { name: "Home", url: siteConfig.baseUrl },
+  ]);
 }
 
 export function getCityFaqs(city: City) {

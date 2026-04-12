@@ -1,17 +1,48 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Girlbests",
-  description: "Privacy policy for Girlbests escort service platform.",
+  description:
+    "Read the privacy policy of Girlbests escort service platform. We are committed to protecting your privacy and maintaining complete confidentiality.",
+  alternates: { canonical: `${siteConfig.baseUrl}/privacy` },
+  openGraph: {
+    title: "Privacy Policy | Girlbests",
+    description: "Complete privacy policy for Girlbests escort service. Your privacy is our priority.",
+    url: `${siteConfig.baseUrl}/privacy`,
+  },
 };
 
 export default function PrivacyPage() {
+  const jsonLdBreadcrumb = breadcrumbSchema([
+    { name: "Home", url: siteConfig.baseUrl },
+    { name: "Privacy Policy", url: `${siteConfig.baseUrl}/privacy` },
+  ]);
+
   return (
-    <section
-      className="py-10"
-      style={{ background: "linear-gradient(135deg,#1a0000 0%,#0d0000 100%)" }}
-    >
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      {/* Breadcrumb Nav */}
+      <nav aria-label="Breadcrumb" className="bg-outer py-2 px-4">
+        <div className="container mx-auto">
+          <ol className="flex items-center gap-2 text-sm text-gray-400">
+            <li><Link href="/" className="hover:text-[#ff9900] transition-colors">Home</Link></li>
+            <li className="text-gray-600">›</li>
+            <li className="text-[#ff9900] font-medium">Privacy Policy</li>
+          </ol>
+        </div>
+      </nav>
+
+      <section
+        className="py-10"
+        style={{ background: "linear-gradient(135deg,#1a0000 0%,#0d0000 100%)" }}
+      >
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-3xl font-bold text-white text-center mb-2">
           Privacy Policy
@@ -63,5 +94,6 @@ export default function PrivacyPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }

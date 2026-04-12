@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Girlbests",
+  description: "The page you are looking for does not exist. Return to Girlbests homepage for India's most trusted call girl service.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

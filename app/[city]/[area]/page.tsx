@@ -33,14 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Call Girl in ${area.name} ${city.name} | Escort Near ${area.name} ₹3999 | Girlbests`,
     description: `Verified call girls in ${area.name}, ${city.name}. Independent escorts available 24/7 near ${area.name}. 100% discreet, cash payment. Book: +91-${siteConfig.phone}.`,
-    keywords: [
-      `call girl in ${area.name}`,
-      `call girl ${area.name} ${city.name}`,
-      `escort near ${area.name}`,
-      `call girl near ${area.name}`,
-      `${area.name} escort service`,
-      `call girl ${area.name} number`,
-    ],
     alternates: { canonical: `${siteConfig.baseUrl}/${city.slug}/${area.slug}` },
     openGraph: {
       title: `Call Girl in ${area.name}, ${city.name} | Girlbests`,
@@ -55,6 +47,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const bannerImages = Array.from({ length: 20 }, (_, i) =>
   `/images/banner/${String(i + 1).padStart(2, "0")}.jpg`
 );
+
+const heroAlts = [
+  (area: string, city: string) => `Premium independent call girl service near ${area}, ${city}`,
+  (area: string, city: string) => `Verified VIP escort available near ${area}, ${city}`,
+  (area: string, city: string) => `High-profile escort companion near ${area}, ${city}`,
+];
 
 export default async function AreaPage({ params }: Props) {
   const { city: citySlug, area: areaSlug } = await params;
@@ -137,7 +135,7 @@ export default async function AreaPage({ params }: Props) {
               <a
                 href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20GirlBests%20I%20need%20service%20in%20${encodeURIComponent(area.name)}%20${encodeURIComponent(city.name)}`}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"
                 aria-label={`WhatsApp for escort in ${area.name}`}
               >
@@ -151,7 +149,7 @@ export default async function AreaPage({ params }: Props) {
               <div key={i} className="img-box rounded-xl overflow-hidden">
                 <Image
                   src={src}
-                  alt={`Call Girl in ${area.name} ${city.name} — Photo ${i + 1}`}
+                  alt={heroAlts[i](area.name, city.name)}
                   width={400}
                   height={280}
                   className="w-full h-52 object-cover"
@@ -177,18 +175,30 @@ export default async function AreaPage({ params }: Props) {
             Genuine photos of verified escorts serving {area.name}, {city.name}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
-            {bannerImages.slice(3, 18).map((src, i) => (
+            {bannerImages.slice(3, 18).map((src, i) => {
+              const galleryAlts = [
+                "Young college girl escort", "Independent model companion",
+                "Russian VIP call girl", "Professional housewife escort",
+                "Premium air hostess companion", "Celebrity model escort",
+                "High-profile independent girl", "Verified escort profile",
+                "Professional escort companion", "VIP escort service",
+                "Luxury model escort", "Discreet companion service",
+                "Elite independent escort", "Premium verified escort",
+                "Exclusive VIP companion",
+              ];
+              return (
               <div key={i} className="img-box">
                 <Image
                   src={src}
-                  alt={`Escort near ${area.name} ${city.name} — ${i + 1}`}
+                  alt={`${galleryAlts[i]} near ${area.name}, ${city.name}`}
                   width={220}
                   height={180}
                   className="w-full h-36 object-cover rounded-xl"
                 />
                 <a href={`tel:${siteConfig.phone}`}>📞 Book</a>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -274,7 +284,7 @@ export default async function AreaPage({ params }: Props) {
               <a
                 href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20I%20need%20service%20in%20${encodeURIComponent(area.name)}%20${encodeURIComponent(city.name)}`}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-colors"
               >
                 💬 WhatsApp
@@ -326,7 +336,7 @@ export default async function AreaPage({ params }: Props) {
             <a
               href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20I%20need%20escort%20service%20near%20${encodeURIComponent(area.name)}%20${encodeURIComponent(city.name)}`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="bg-green-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-green-600 transition-colors"
             >
               💬 WhatsApp

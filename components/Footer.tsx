@@ -79,7 +79,7 @@ export default function Footer() {
             <a
               href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20GirlBests`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="text-green-400 hover:underline text-sm"
             >
               WhatsApp

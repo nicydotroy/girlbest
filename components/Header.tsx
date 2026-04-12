@@ -32,7 +32,7 @@ export default function Header() {
               href={`https://wa.me/${siteConfig.whatsapp2}?text=Hii%20Girlbest%20Call%20Girl`}
               className="text-white text-sm font-semibold inline-flex items-center gap-1"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
             >
               📱 +91-{siteConfig.whatsapp2}
             </a>
@@ -43,7 +43,7 @@ export default function Header() {
               href="https://www.facebook.com/"
               className="text-white"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="Facebook"
             >
               f
@@ -52,7 +52,7 @@ export default function Header() {
               href="https://www.instagram.com"
               className="text-white"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               aria-label="Instagram"
             >
               in
@@ -68,7 +68,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/images/logo.jpg"
-                alt="Girlbests"
+                alt="Girlbests — No.1 Call Girl Service in India"
                 width={160}
                 height={50}
                 className="h-12 w-auto"

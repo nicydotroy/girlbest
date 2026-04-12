@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
-import { organizationSchema, faqSchema } from "@/lib/schema";
+import { organizationSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact Us | Book Call Girl Service 24/7 | Girlbests",
   description:
     "Contact Girlbests to book escort service across India. Call or WhatsApp +91-7061819139 anytime. 24/7 response, instant booking confirmation.",
-  keywords: [
-    "contact girlbests", "book call girl", "call girl number India",
-    "escort service contact", "girlbests whatsapp",
-  ],
   alternates: { canonical: `${siteConfig.baseUrl}/contact` },
   openGraph: {
     title: "Contact Girlbests | Book Call Girl 24/7",
@@ -36,6 +33,10 @@ const contactFaqs = [
 export default function ContactPage() {
   const jsonLdOrg = organizationSchema();
   const jsonLdFaq = faqSchema(contactFaqs);
+  const jsonLdBreadcrumb = breadcrumbSchema([
+    { name: "Home", url: siteConfig.baseUrl },
+    { name: "Contact Us", url: `${siteConfig.baseUrl}/contact` },
+  ]);
 
   return (
     <>
@@ -47,6 +48,22 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      {/* Breadcrumb Nav */}
+      <nav aria-label="Breadcrumb" className="bg-outer py-2 px-4">
+        <div className="container mx-auto">
+          <ol className="flex items-center gap-2 text-sm text-gray-400">
+            <li><Link href="/" className="hover:text-[#ff9900] transition-colors">Home</Link></li>
+            <li className="text-gray-600">›</li>
+            <li className="text-[#ff9900] font-medium">Contact Us</li>
+          </ol>
+        </div>
+      </nav>
+
       <section
       className="py-10"
       style={{ background: "linear-gradient(135deg,#1a0000 0%,#0d0000 100%)" }}
@@ -74,7 +91,7 @@ export default function ContactPage() {
           <a
             href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20GirlBests%20I%20need%20booking`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="bg-outer rounded-xl p-6 flex items-center gap-4 hover:border-green-600 transition-colors"
           >
             <span className="text-4xl">💬</span>
@@ -87,7 +104,7 @@ export default function ContactPage() {
           <a
             href={`https://wa.me/${siteConfig.whatsapp2}?text=Hi%20GirlBests`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="bg-outer rounded-xl p-6 flex items-center gap-4 hover:border-green-600 transition-colors"
           >
             <span className="text-4xl">💬</span>

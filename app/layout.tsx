@@ -17,12 +17,6 @@ export const metadata: Metadata = {
     template: "%s | Girlbests",
   },
   description: siteConfig.defaultDescription,
-  keywords: [
-    "call girl service", "escort service", "call girls near me",
-    "independent escorts", "call girl booking", "escort near me",
-    "call girl number", "girlbests", "escort service India",
-    "call girl service India", "call girl whatsapp number",
-  ],
   authors: [{ name: "Girlbests", url: siteConfig.baseUrl }],
   creator: "Girlbests",
   publisher: "Girlbests",
@@ -37,7 +31,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/own/Call Girls Service in Hyderabad.png",
+        url: "/images/logo.jpg",
         width: 1200,
         height: 630,
         alt: "Girlbests — No.1 Call Girl Service India",
@@ -48,13 +42,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "No.1 Call Girl Service in India | Girlbests",
     description: siteConfig.defaultDescription,
-    images: ["/images/own/Call Girls Service in Hyderabad.png"],
+    images: ["/images/logo.jpg"],
   },
   verification: {
     google: "MX8A9CR3qdNYnltT9p9K3ZRViMg4e5GSXKM_10BFplo",
   },
   alternates: {
     canonical: siteConfig.baseUrl,
+    languages: {
+      "en-IN": siteConfig.baseUrl,
+    },
   },
 };
 
@@ -83,6 +80,15 @@ export default function RootLayout({
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${siteConfig.gtag}');`,
           }}
         />
+        <noscript>
+          <img
+            src={`https://www.googletagmanager.com/ns.html?id=${siteConfig.gtag}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            alt=""
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

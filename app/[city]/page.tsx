@@ -27,16 +27,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Call Girl in ${city.name} | Escort Service ${city.name} ₹3999 | Girlbests`,
     description: `Find verified call girls in ${city.name}${city.state ? `, ${city.state}` : ""}. College girls, Russian models, VIP escorts available 24/7. Cash payment. Instant booking: +91-${siteConfig.phone}.`,
-    keywords: [
-      `call girl in ${city.name}`,
-      `call girl service ${city.name}`,
-      `escort service ${city.name}`,
-      `call girl ${city.name} number`,
-      `${city.name} escort`,
-      `independent call girl ${city.name}`,
-      `Russian call girl ${city.name}`,
-      `call girl near me ${city.name}`,
-    ],
     alternates: { canonical: `${siteConfig.baseUrl}/${city.slug}` },
     openGraph: {
       title: `Call Girl in ${city.name} | Escort Service | Girlbests`,
@@ -51,6 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const bannerImages = Array.from({ length: 10 }, (_, i) =>
   `/images/banner/${String(i + 1).padStart(2, "0")}.jpg`
 );
+
+const heroAlts = [
+  (name: string) => `Premium independent call girl service in ${name}`,
+  (name: string) => `Verified VIP escort available for booking in ${name}`,
+  (name: string) => `High-profile college girl escort in ${name} available 24/7`,
+];
 
 export default async function CityPage({ params }: Props) {
   const { city: citySlug } = await params;
@@ -135,7 +131,7 @@ export default async function CityPage({ params }: Props) {
               <a
                 href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20GirlBests%20I%20need%20service%20in%20${encodeURIComponent(city.name)}`}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"
                 aria-label={`WhatsApp to book escort in ${city.name}`}
               >
@@ -150,7 +146,7 @@ export default async function CityPage({ params }: Props) {
               <div key={i} className="img-box rounded-xl overflow-hidden">
                 <Image
                   src={src}
-                  alt={`Call Girl Service in ${city.name} Photo ${i + 1}`}
+                  alt={heroAlts[i](city.name)}
                   width={400}
                   height={280}
                   className="w-full h-52 object-cover"
@@ -205,18 +201,27 @@ export default async function CityPage({ params }: Props) {
             Genuine photos of verified escorts available in {city.name}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {bannerImages.slice(3, 13).map((src, i) => (
+            {bannerImages.slice(3, 13).map((src, i) => {
+              const galleryAlts = [
+                "Young college girl escort", "Independent model companion",
+                "Russian VIP call girl", "Professional housewife escort",
+                "Premium air hostess companion", "Celebrity model escort",
+                "High-profile independent girl", "Verified escort profile",
+                "Professional escort companion", "VIP escort service",
+              ];
+              return (
               <div key={i} className="img-box">
                 <Image
                   src={src}
-                  alt={`Call Girl in ${city.name} — Photo ${i + 1}`}
+                  alt={`${galleryAlts[i] || "Verified escort"} in ${city.name}`}
                   width={220}
                   height={180}
                   className="w-full h-36 object-cover rounded-xl"
                 />
                 <a href={`tel:${siteConfig.phone}`}>📞 Book</a>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -267,7 +272,7 @@ export default async function CityPage({ params }: Props) {
 
             {/* Rate table */}
             <h3 className="text-xl font-bold text-[#ff9900] mb-3">
-              Call Girl Rates in {city.name} 2024
+              Call Girl Rates in {city.name} 2026
             </h3>
             <div className="overflow-x-auto mb-4">
               <table className="w-full text-sm text-gray-300 border-collapse">
@@ -344,7 +349,7 @@ export default async function CityPage({ params }: Props) {
             <a
               href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20I%20need%20escort%20service%20in%20${encodeURIComponent(city.name)}`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="bg-green-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-green-600 transition-colors"
             >
               💬 WhatsApp

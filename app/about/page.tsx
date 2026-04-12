@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
-import { organizationSchema, faqSchema } from "@/lib/schema";
+import { organizationSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 const aboutFaqs = [
   {
@@ -25,10 +26,6 @@ export const metadata: Metadata = {
   title: "About Girlbests | India's No.1 Trusted Escort Service | Est. 2015",
   description:
     "Girlbests is India's most trusted and verified escort service. 10+ years experience, 1 lakh+ clients, 1000+ profiles, 90+ cities. Learn about our commitment to safety, privacy and genuine service.",
-  keywords: [
-    "about girlbests", "trusted escort service India", "genuine call girl service",
-    "verified escort India", "escort service review",
-  ],
   alternates: { canonical: `${siteConfig.baseUrl}/about` },
   openGraph: {
     title: "About Girlbests | India's No.1 Escort Service",
@@ -40,6 +37,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const jsonLdOrg = organizationSchema();
   const jsonLdFaqAbout = faqSchema(aboutFaqs);
+  const jsonLdBreadcrumb = breadcrumbSchema([
+    { name: "Home", url: siteConfig.baseUrl },
+    { name: "About Us", url: `${siteConfig.baseUrl}/about` },
+  ]);
 
   return (
     <>
@@ -51,6 +52,21 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaqAbout) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      {/* Breadcrumb Nav */}
+      <nav aria-label="Breadcrumb" className="bg-outer py-2 px-4">
+        <div className="container mx-auto">
+          <ol className="flex items-center gap-2 text-sm text-gray-400">
+            <li><Link href="/" className="hover:text-[#ff9900] transition-colors">Home</Link></li>
+            <li className="text-gray-600">›</li>
+            <li className="text-[#ff9900] font-medium">About Us</li>
+          </ol>
+        </div>
+      </nav>
 
       <section aria-label="About Girlbests" className="py-12" style={{ background: "linear-gradient(135deg,#1a0000 0%,#0d0000 100%)" }}>
         <div className="container mx-auto px-4 max-w-4xl">

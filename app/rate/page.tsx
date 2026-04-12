@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
-import { serviceSchema, faqSchema } from "@/lib/schema";
+import { serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Call Girl Rates 2024 | Escort Service Price List India | Girlbests",
+  title: "Call Girl Rates 2026 | Escort Service Price List India | Girlbests",
   description:
-    "Complete call girl rate list 2024. College girls from ₹3,999. Model escorts from ₹7,999. Russian VIP from ₹14,999. Transparent pricing, cash payment. Call +91-7061819139.",
-  keywords: [
-    "call girl rate", "escort service price", "call girl price India",
-    "call girl charges", "escort rate list", "how much call girl cost",
-    "call girl price 2024",
-  ],
+    "Complete call girl rate list 2026. College girls from ₹3,999. Model escorts from ₹7,999. Russian VIP from ₹14,999. Transparent pricing, cash payment. Call +91-7061819139.",
   alternates: { canonical: `${siteConfig.baseUrl}/rate` },
   openGraph: {
-    title: "Call Girl Rates 2024 | Escort Price List | Girlbests",
+    title: "Call Girl Rates 2026 | Escort Price List | Girlbests",
     description: "Complete transparent escort rate list. Starting ₹3,999. All types covered.",
     url: `${siteConfig.baseUrl}/rate`,
   },
@@ -80,6 +76,10 @@ const ratePackages = [
 export default function RatePage() {
   const jsonLdService = serviceSchema("India");
   const jsonLdFaq = faqSchema(rateFaqs);
+  const jsonLdBreadcrumb = breadcrumbSchema([
+    { name: "Home", url: siteConfig.baseUrl },
+    { name: "Call Girl Rates", url: `${siteConfig.baseUrl}/rate` },
+  ]);
 
   return (
     <>
@@ -91,6 +91,22 @@ export default function RatePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+
+      {/* Breadcrumb Nav */}
+      <nav aria-label="Breadcrumb" className="bg-outer py-2 px-4">
+        <div className="container mx-auto">
+          <ol className="flex items-center gap-2 text-sm text-gray-400">
+            <li><Link href="/" className="hover:text-[#ff9900] transition-colors">Home</Link></li>
+            <li className="text-gray-600">›</li>
+            <li className="text-[#ff9900] font-medium">Call Girl Rates</li>
+          </ol>
+        </div>
+      </nav>
+
       <section
       className="py-10"
       style={{ background: "linear-gradient(135deg,#1a0000 0%,#0d0000 100%)" }}
@@ -156,7 +172,7 @@ export default function RatePage() {
             <a
               href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20I%20need%20rates%20and%20availability`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-10 rounded-full text-lg transition-colors"
             >
               💬 WhatsApp

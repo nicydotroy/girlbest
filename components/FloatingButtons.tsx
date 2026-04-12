@@ -31,7 +31,7 @@ export default function FloatingButtons({
       <a
         href={`https://wa.me/${siteConfig.whatsapp2}?text=${encodeURIComponent(message)}`}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className="fixed bottom-3 right-3 z-[2147483644] bg-green-500 text-white px-4 py-2 rounded-full shadow-xl hover:scale-105 transition-transform text-sm font-semibold"
         aria-label="WhatsApp us"
       >

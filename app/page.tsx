@@ -7,6 +7,8 @@ import {
   faqSchema,
   serviceSchema,
   reviewsSchema,
+  howToSchema,
+  homeBreadcrumbSchema,
   getHomepageFaqs,
 } from "@/lib/schema";
 
@@ -14,12 +16,6 @@ export const metadata: Metadata = {
   title: "No.1 Call Girl Service in India | Independent Escorts ₹3999 | Girlbests",
   description:
     "India's most trusted call girl service. 1000+ verified profiles across 90+ cities. College girls, Russian escorts, VIP models available 24/7. Cash payment. Book now: +91-7061819139.",
-  keywords: [
-    "call girl service", "call girl near me", "escort service India",
-    "call girl booking", "independent escort", "call girl number",
-    "call girls India", "escort near me", "call girl whatsapp",
-    "cheapest call girl", "Russian call girl India",
-  ],
   alternates: { canonical: siteConfig.baseUrl },
   openGraph: {
     title: "No.1 Call Girl Service in India | Girlbests",
@@ -31,15 +27,19 @@ export const metadata: Metadata = {
 };
 
 const sliderImages = [
-  "/images/slider/01.jpg",
-  "/images/slider/02.jpg",
-  "/images/slider/03.jpg",
+  { src: "/images/slider/01.jpg", alt: "Premium independent call girl service available across India" },
+  { src: "/images/slider/02.jpg", alt: "Verified VIP escort companions for discreet bookings" },
+  { src: "/images/slider/03.jpg", alt: "High-profile college girl escorts available 24/7 in 90+ cities" },
 ];
 
-const galleryImages = Array.from(
-  { length: 12 },
-  (_, i) => `/images/gallery/${String(i + 1).padStart(2, "0")}.jpg`
-);
+const galleryImages = [
+  { src: "/images/gallery/01.jpg", alt: "Young college call girl escort in India" },
+  { src: "/images/gallery/02.jpg", alt: "Independent high-profile model escort" },
+  { src: "/images/gallery/03.jpg", alt: "Russian VIP call girl available for booking" },
+  { src: "/images/gallery/04.jpg", alt: "Professional housewife escort companion" },
+  { src: "/images/gallery/05.jpg", alt: "Premium air hostess call girl service" },
+  { src: "/images/gallery/06.jpg", alt: "Celebrity model escort available 24/7" },
+];
 
 const serviceTypes = [
   { label: "College Call Girls", icon: "🎓" },
@@ -87,6 +87,8 @@ export default function Home() {
   const jsonLdFaq = faqSchema(homeFaqs);
   const jsonLdService = serviceSchema("India");
   const jsonLdReviews = reviewsSchema();
+  const jsonLdHowTo = howToSchema();
+  const jsonLdBreadcrumb = homeBreadcrumbSchema();
 
   return (
     <>
@@ -103,6 +105,14 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdReviews) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
 
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section
@@ -112,11 +122,11 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {sliderImages.map((src, i) => (
+            {sliderImages.map((img, i) => (
               <div key={i} className="img-box rounded-xl overflow-hidden">
                 <Image
-                  src={src}
-                  alt={`Call Girl Service India ${i + 1}`}
+                  src={img.src}
+                  alt={img.alt}
                   width={400}
                   height={280}
                   className="w-full h-52 object-cover"
@@ -149,7 +159,7 @@ export default function Home() {
               <a
                 href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20GirlBests%20I%20need%20service`}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"
                 aria-label="WhatsApp to book escort service"
               >
@@ -239,12 +249,12 @@ export default function Home() {
           <p className="text-gray-400 text-center mb-6">
             Browse genuine photos of verified escorts available near you
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {galleryImages.map((src, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {galleryImages.map((img, i) => (
               <div key={i} className="img-box">
                 <Image
-                  src={src}
-                  alt={`Call Girl India Photo ${i + 1} — Girlbests`}
+                  src={img.src}
+                  alt={img.alt}
                   width={300}
                   height={220}
                   className="w-full h-44 object-cover rounded-xl"
@@ -487,7 +497,7 @@ export default function Home() {
             <a
               href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20GirlBests%20I%20need%20booking`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="bg-green-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-green-600 transition-colors"
             >
               💬 WhatsApp Us
