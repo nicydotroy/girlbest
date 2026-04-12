@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Girlbests",
-  baseUrl: "https://girlbests.com",
+  baseUrl: "https://girlbests.in",
   phone: "7061819139",
   whatsapp: "7061819139",
   whatsapp2: "9229604907",

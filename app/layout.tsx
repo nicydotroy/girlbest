@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ["/images/own/Call Girls Service in Hyderabad.png"],
   },
   verification: {
-    google: "your-google-search-console-token",
+    google: "MX8A9CR3qdNYnltT9p9K3ZRViMg4e5GSXKM_10BFplo",
   },
   alternates: {
     canonical: siteConfig.baseUrl,
