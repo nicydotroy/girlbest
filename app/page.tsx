@@ -424,14 +424,14 @@ export default function Home() {
         aria-label="Frequently asked questions about escort service"
         className="bg-main py-10"
       >
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
             Frequently Asked Questions
           </h2>
           <p className="text-gray-400 text-center mb-8">
             Answers to common questions about our call girl service in India
           </p>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {homeFaqs.map(({ q, a }) => (
               <div key={q} className="bg-outer rounded-xl p-5">
                 <h3 className="text-white font-bold text-base mb-2">{q}</h3>

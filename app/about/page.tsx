@@ -20,6 +20,54 @@ const aboutFaqs = [
     q: "What cities does Girlbests cover?",
     a: "Girlbests covers 90+ cities across India including Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad and many more.",
   },
+  {
+    q: "What is the mission of Girlbests?",
+    a: "Our mission is to provide a safe, transparent and professional platform connecting clients with verified escorts. We prioritize safety, privacy and genuine experiences.",
+  },
+  {
+    q: "How many escorts are listed on Girlbests?",
+    a: "Girlbests has over 1000+ verified escort profiles across India. New profiles are added daily after thorough verification by our team.",
+  },
+  {
+    q: "What makes Girlbests different from other escort services?",
+    a: "Girlbests stands out with 100% verified profiles, cash-only payment for privacy, 24/7 availability, 10+ years of experience and a zero-complaints policy.",
+  },
+  {
+    q: "Does Girlbests have a physical office?",
+    a: "Girlbests operates primarily online for client privacy. Our team coordinates bookings via phone and WhatsApp. We have representatives in all major cities.",
+  },
+  {
+    q: "What is the age requirement to use Girlbests?",
+    a: "You must be 18 years or older to use Girlbests. All escorts listed on our platform are also verified adults aged 18+. Age verification is mandatory.",
+  },
+  {
+    q: "Does Girlbests operate legally?",
+    a: "Girlbests operates as an adult companion directory. All services are between consenting adults. We comply with applicable laws and do not facilitate illegal activities.",
+  },
+  {
+    q: "How does Girlbests verify escort profiles?",
+    a: "Our verification process includes photo verification, identity checks and in-person meeting. Only after passing all checks is a profile listed on our platform.",
+  },
+  {
+    q: "Can I trust the reviews on Girlbests?",
+    a: "Yes. All reviews on Girlbests are from verified clients. We do not allow fake or paid reviews. Our rating system reflects genuine client experiences.",
+  },
+  {
+    q: "What customer support does Girlbests offer?",
+    a: "We offer 24/7 customer support via phone and WhatsApp. Our team is always available to help with bookings, queries and any concerns you may have.",
+  },
+  {
+    q: "Does Girlbests share my data with third parties?",
+    a: "Never. We have a strict no-disclosure policy. Client data is never shared, sold or transferred to any third party. Your privacy is our top priority.",
+  },
+  {
+    q: "How can I provide feedback about Girlbests?",
+    a: "You can share your feedback via WhatsApp or phone call. We value client feedback and continuously improve our services based on your suggestions.",
+  },
+  {
+    q: "What is the cancellation policy at Girlbests?",
+    a: "You can cancel anytime before the escort arrives with no charges. We never take advance payments, so cancellation is completely risk-free for clients.",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -169,13 +217,13 @@ export default function AboutPage() {
           </div>
 
           {/* FAQ */}
-          <div className="bg-outer rounded-xl p-6 md:p-8 mb-8">
-            <h2 className="text-2xl font-bold text-[#ff9900] mb-6">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-[#ff9900] mb-6 text-center">
               About Girlbests — FAQ
             </h2>
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {aboutFaqs.map(({ q, a }) => (
-                <div key={q} className="border-b border-[#5e0707]/40 pb-4 last:border-0 last:pb-0">
+                <div key={q} className="bg-outer rounded-xl p-5">
                   <h3 className="text-white font-bold text-sm mb-2">{q}</h3>
                   <p className="text-gray-300 text-sm leading-relaxed">{a}</p>
                 </div>

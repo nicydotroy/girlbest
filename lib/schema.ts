@@ -280,6 +280,30 @@ export function getHomepageFaqs() {
       q: "What types of escorts are available?",
       a: "We offer college call girls, independent escorts, Russian and foreign models, VIP high-profile escorts, housewife escorts, model escorts and air hostess companions across India.",
     },
+    {
+      q: "Can I see photos before booking?",
+      a: "Yes. Once you call or WhatsApp us, we share verified photos and profile details of available escorts matching your preferences. All photos on our platform are genuine and recent.",
+    },
+    {
+      q: "What is the cancellation policy?",
+      a: "You can cancel your booking at any time before the escort arrives with no charges. We do not take advance payments or deposits. Payment is cash-only upon meeting.",
+    },
+    {
+      q: "Do you provide escort service at hotels?",
+      a: "Yes. Our escorts provide service at all major hotels, resorts, guest houses and private residences across India. Outcall to your location is our primary service model.",
+    },
+    {
+      q: "How many cities does Girlbests operate in?",
+      a: "Girlbests operates in 90+ cities across India including all metros like Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur and tier-2 cities.",
+    },
+    {
+      q: "Is there a minimum booking duration?",
+      a: "The minimum booking is 1 hour (short time). We also offer 2-hour, 4-hour and full night (8-10 hours) packages. Custom durations can be arranged on request.",
+    },
+    {
+      q: "How do I know Girlbests is trustworthy?",
+      a: "Girlbests has been operating since 2015 with over 1 lakh satisfied clients. We maintain a 4.8/5 rating, zero-complaints policy and 100% verified profiles. Our decade-long track record speaks for itself.",
+    },
   ];
 }
 
@@ -357,6 +381,38 @@ export function getCityFaqs(city: City) {
       q: `Are there Russian call girls available in ${city.name}?`,
       a: `Yes. We have Russian and foreign model escorts available in ${city.name}. Russian escort rates in ${city.name} start from ₹14,999. Call +91-${phone} for availability.`,
     },
+    {
+      q: `What is the cheapest call girl rate in ${city.name}?`,
+      a: `The most affordable call girl service in ${city.name} starts from ₹3,999 for a short-time booking. College girl escorts are the most budget-friendly option in ${city.name}.`,
+    },
+    {
+      q: `Can I book a call girl for a full night in ${city.name}?`,
+      a: `Yes. Full night escort bookings in ${city.name} are available starting from ₹6,999. Full night means 8 to 10 hours of companionship. Call +91-${phone} for availability.`,
+    },
+    {
+      q: `Do you provide independent escorts in ${city.name}?`,
+      a: `Yes. We have a large number of independent call girls working in ${city.name}. Independent escorts manage their own schedules and are available for incall and outcall.`,
+    },
+    {
+      q: `What is the best escort service in ${city.name}?`,
+      a: `Girlbests is rated the best escort service in ${city.name} with 4.8/5 client satisfaction. We offer 1000+ verified profiles, 24/7 availability and 100% discreet cash payment.`,
+    },
+    {
+      q: `Are college call girls available in ${city.name}?`,
+      a: `Yes. College call girls in ${city.name} are among our most popular category. Starting from ₹3,999, they are young, educated and well-mannered companions. All are 18+ and verified.`,
+    },
+    {
+      q: `Can I see photos before booking in ${city.name}?`,
+      a: `Yes. When you call or WhatsApp +91-${phone}, we share genuine verified photos of available escorts in ${city.name}. All photos are recent and authentic — no fake pictures.`,
+    },
+    {
+      q: `Is there any advance payment required in ${city.name}?`,
+      a: `No. We never ask for advance payment or deposits. All payments are made in cash directly when you meet the escort in ${city.name}. This ensures zero risk for clients.`,
+    },
+    {
+      q: `What areas in ${city.name} do you cover?`,
+      a: `We cover all major areas and localities in ${city.name}. Our escorts can reach any hotel, residence or private location within ${city.name} city limits. Check our area listing for details.`,
+    },
   ];
 }
 
@@ -386,6 +442,46 @@ export function getAreaFaqs(city: City, area: Area) {
     {
       q: `Is it safe to use escort service in ${area.name}?`,
       a: `Yes. Our service in ${area.name}, ${city.name} is completely safe, verified and discreet. We have served thousands of clients and maintain a zero-complaints policy.`,
+    },
+    {
+      q: `Do escorts come to hotels near ${area.name}?`,
+      a: `Yes. Our call girls provide outcall service to all hotels, guest houses and residences near ${area.name}, ${city.name}. Room service is available at any location.`,
+    },
+    {
+      q: `What types of escorts are available near ${area.name}?`,
+      a: `Near ${area.name}, ${city.name} we offer college girls, independent escorts, Russian models, VIP high-profile companions, housewife escorts and model escorts. All verified.`,
+    },
+    {
+      q: `Are there independent call girls in ${area.name}?`,
+      a: `Yes. Independent call girls are available near ${area.name}, ${city.name}. They manage their own schedule and offer both incall and outcall services. Call +91-${phone} for profiles.`,
+    },
+    {
+      q: `Can I see photos of escorts near ${area.name}?`,
+      a: `Yes. When you contact us for ${area.name}, ${city.name}, we share genuine verified photos of available escorts. All photos are real and recent — no fake images.`,
+    },
+    {
+      q: `Is advance payment required for ${area.name} booking?`,
+      a: `No. We never take advance payments or deposits for ${area.name}, ${city.name} bookings. Cash payment only, made directly when you meet the escort.`,
+    },
+    {
+      q: `What is the cheapest escort service in ${area.name}?`,
+      a: `The most affordable escort service in ${area.name}, ${city.name} starts from ₹3,999 for a short-time booking. College girl escorts are the budget-friendly choice.`,
+    },
+    {
+      q: `Are college call girls available in ${area.name}?`,
+      a: `Yes. College call girls near ${area.name}, ${city.name} are available starting from ₹3,999. Young, educated and well-mannered. All are 18+ verified.`,
+    },
+    {
+      q: `Can I book a full night escort in ${area.name}?`,
+      a: `Yes. Full night escort bookings near ${area.name}, ${city.name} are available from ₹6,999. A full night booking means 8 to 10 hours of companionship.`,
+    },
+    {
+      q: `Are Russian escorts available near ${area.name}?`,
+      a: `Yes. Russian and foreign model escorts are available near ${area.name}, ${city.name}. Premium Russian escorts start from ₹14,999. Call +91-${phone} for availability.`,
+    },
+    {
+      q: `What is the cancellation policy for ${area.name} bookings?`,
+      a: `You can cancel your ${area.name}, ${city.name} booking anytime before the escort arrives with no charges. We never take advance payment, so cancellation is completely risk-free.`,
     },
   ];
 }

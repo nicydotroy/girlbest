@@ -37,6 +37,54 @@ const rateFaqs = [
     q: "Are the rates on Girlbests fixed or negotiable?",
     a: "The rates shown are starting prices. Final rate depends on your city, escort selection and services required. Call +91-7061819139 for a confirmed quote.",
   },
+  {
+    q: "What is the rate for college call girls?",
+    a: "College call girl rates start from ₹3,999 for short time and ₹6,999 for full night. They are the most affordable and popular escort category.",
+  },
+  {
+    q: "How much does an independent escort cost?",
+    a: "Independent escort rates start from ₹4,999 for short time and ₹8,999 for full night. Independent escorts often offer more flexible services.",
+  },
+  {
+    q: "What is the VIP escort service rate?",
+    a: "VIP high-profile escort rates start from ₹9,999 for short time and ₹14,999 for full night. VIP escorts include models, actresses and celebrity companions.",
+  },
+  {
+    q: "Do rates vary by city?",
+    a: "Yes. Rates may vary slightly between cities. Metro cities like Delhi, Mumbai and Bangalore may have different pricing than tier-2 cities. Call for exact rates.",
+  },
+  {
+    q: "Is there any hidden charge or extra fee?",
+    a: "No. The rate quoted is the final rate. There are no hidden charges, service fees or taxes. What we quote is exactly what you pay in cash.",
+  },
+  {
+    q: "Do I need to pay in advance?",
+    a: "No. We never ask for advance payment or deposits. Full payment is made in cash only when you meet the escort. Zero risk for clients.",
+  },
+  {
+    q: "What is included in the escort service rate?",
+    a: "The quoted rate includes the escort's companionship for the booked duration. Specific services vary by escort. Call +91-7061819139 to discuss details.",
+  },
+  {
+    q: "How much does a housewife escort cost?",
+    a: "Housewife escort rates start from ₹4,999 for short time and ₹7,999 for full night. Housewife escorts are experienced and mature companions.",
+  },
+  {
+    q: "Are there any discounts for regular clients?",
+    a: "Yes. We offer special rates and priority booking for regular clients. Contact us to learn about our loyalty benefits and repeat booking discounts.",
+  },
+  {
+    q: "What is the rate for a 2-hour booking?",
+    a: "A 2-hour booking typically costs between ₹4,999 and ₹7,999 depending on the escort category. This is a popular option for extended companionship.",
+  },
+  {
+    q: "How do I get the best rate for escort service?",
+    a: "Call us directly at +91-7061819139 and tell us your budget. We will find the best matching escort within your price range across any city in India.",
+  },
+  {
+    q: "Are model escort rates different from regular escorts?",
+    a: "Yes. Model escorts are premium category with rates starting from ₹9,999 for short time. They are professional models offering high-end companionship.",
+  },
 ];
 
 const ratePackages = [
@@ -186,13 +234,13 @@ export default function RatePage() {
         </div>
 
         {/* Rate FAQ (ASO + VSO) */}
-        <div className="bg-outer rounded-xl p-6 mt-8">
-          <h2 className="text-xl font-bold text-[#ff9900] mb-6">
+        <div className="mt-8">
+          <h2 className="text-xl font-bold text-[#ff9900] mb-6 text-center">
             Call Girl Rate — FAQ
           </h2>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {rateFaqs.map(({ q, a }) => (
-              <div key={q} className="border-b border-[#5e0707]/40 pb-4 last:border-0 last:pb-0">
+              <div key={q} className="bg-outer rounded-xl p-5">
                 <h3 className="text-white font-bold text-sm mb-1">{q}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{a}</p>
               </div>

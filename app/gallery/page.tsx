@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Photo Gallery | Call Girls Gallery | Girlbests",
@@ -54,6 +54,73 @@ const allImages = [
 ];
 
 export default function GalleryPage() {
+  const galleryFaqs = [
+    {
+      q: "Are the photos in the gallery real and verified?",
+      a: "Yes. All photos in our gallery are genuine and verified by our team. We never use stock photos or fake images. Every photo belongs to a real, verified escort.",
+    },
+    {
+      q: "Can I book a call girl directly from the gallery?",
+      a: "Yes. Simply call +91-7061819139 or WhatsApp us mentioning the escort you like from the gallery. We will confirm availability and booking instantly.",
+    },
+    {
+      q: "How often is the gallery updated with new photos?",
+      a: "Our gallery is updated regularly with new verified escort photos. New profiles are added daily as we onboard and verify new escorts across India.",
+    },
+    {
+      q: "Do the escorts look the same as their gallery photos?",
+      a: "Yes. All our escorts look exactly like their gallery photos. Our verification process ensures photo authenticity. What you see is what you get.",
+    },
+    {
+      q: "Can I request more photos of a specific escort?",
+      a: "Yes. Contact us via WhatsApp at +91-7061819139 and we can share additional verified photos of any escort listed in our gallery.",
+    },
+    {
+      q: "Are all gallery escorts available for booking?",
+      a: "Most escorts in our gallery are currently available. Availability changes daily. Call +91-7061819139 to confirm real-time availability of a specific escort.",
+    },
+    {
+      q: "What types of escorts are shown in the gallery?",
+      a: "Our gallery features college call girls, independent escorts, Russian models, VIP high-profile companions, housewife escorts and model escorts from across India.",
+    },
+    {
+      q: "Can I see photos of escorts in my specific city?",
+      a: "Yes. Contact us with your city name and we will share gallery photos of escorts specifically available in your city and nearby areas.",
+    },
+    {
+      q: "Are the gallery photos recent?",
+      a: "Yes. All gallery photos are recent, taken within the last few months. We regularly update and remove outdated photos to maintain accuracy.",
+    },
+    {
+      q: "Do you have video profiles of escorts?",
+      a: "Some escorts have video introductions available on request. Contact us via WhatsApp and we can share video profiles where available.",
+    },
+    {
+      q: "Can I browse escorts by category in the gallery?",
+      a: "Our gallery showcases all escort categories. For category-specific browsing, contact us and we will curate profiles matching your preference — college, VIP, Russian etc.",
+    },
+    {
+      q: "How many escort photos are in the gallery?",
+      a: "Our gallery contains 1000+ verified escort photos. The online gallery shows a curated selection. Contact us for the full portfolio in your preferred city.",
+    },
+    {
+      q: "Are face photos available for escorts?",
+      a: "Face photos are available for select escorts who consent to showing their face. Many escorts prefer partial face or no-face photos for privacy. Ask us for details.",
+    },
+    {
+      q: "Can I share gallery photos with someone?",
+      a: "We request that you do not share escort photos publicly. Photos are shared for booking purposes only. Sharing without consent violates our privacy policy.",
+    },
+    {
+      q: "Do gallery escorts offer both incall and outcall?",
+      a: "Most gallery escorts offer outcall service (coming to your location). Some also offer incall. Confirm the available service type when you contact us for booking.",
+    },
+    {
+      q: "Why should I trust Girlbests gallery over others?",
+      a: "Unlike other platforms, every Girlbests gallery photo is personally verified. We have a 10+ year track record with zero fake-photo complaints. 100% genuine, guaranteed.",
+    },
+  ];
+
   const jsonLdBreadcrumb = breadcrumbSchema([
     { name: "Home", url: siteConfig.baseUrl },
     { name: "Photo Gallery", url: `${siteConfig.baseUrl}/gallery` },
@@ -135,6 +202,30 @@ export default function GalleryPage() {
             >
               📞 Call to Book: +91-{siteConfig.phone}
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(galleryFaqs)) }}
+      />
+      <section aria-label="Gallery FAQ" className="bg-main py-10">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+            Photo Gallery — Frequently Asked Questions
+          </h2>
+          <p className="text-gray-400 text-center mb-8">
+            Common questions about our escort photo gallery
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {galleryFaqs.map(({ q, a }) => (
+              <div key={q} className="bg-outer rounded-xl p-5">
+                <h3 className="text-white font-bold text-sm mb-2">{q}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

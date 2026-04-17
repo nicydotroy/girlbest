@@ -33,6 +33,58 @@ const contactFaqs = [
     q: "Is WhatsApp booking safe and private?",
     a: "Yes. WhatsApp messages are end-to-end encrypted. We never save client conversations. Everything is 100% private and confidential.",
   },
+  {
+    q: "Can I call instead of WhatsApp to book?",
+    a: "Yes. You can call directly at +91-7061819139. Our booking team is available 24/7 to take your call and confirm bookings instantly.",
+  },
+  {
+    q: "What are your operating hours?",
+    a: "We operate 24 hours a day, 7 days a week including all holidays. You can call or WhatsApp us at any time — day or night.",
+  },
+  {
+    q: "How quickly will I get a response after contacting?",
+    a: "We respond within 2 to 5 minutes on WhatsApp and answer calls immediately. During peak hours, response may take up to 10 minutes.",
+  },
+  {
+    q: "Can I book an escort for a specific date and time?",
+    a: "Yes. You can make advance bookings by specifying your preferred date, time and location. We will confirm availability and schedule your booking.",
+  },
+  {
+    q: "Do you have a second WhatsApp number?",
+    a: "Yes. If our primary number is busy, you can reach us at +91-9229604907. Both numbers are active 24/7 for bookings and enquiries.",
+  },
+  {
+    q: "Can I request a specific type of escort?",
+    a: "Yes. Tell us your preference — college girl, Russian, VIP, housewife, model or independent escort. We will share matching verified profiles.",
+  },
+  {
+    q: "Is there any registration required to book?",
+    a: "No. No registration, sign-up or account creation is needed. Simply call or WhatsApp us directly and your booking will be confirmed.",
+  },
+  {
+    q: "Can I reschedule my booking after confirming?",
+    a: "Yes. You can reschedule your booking by calling or WhatsApp. Rescheduling is free and can be done anytime before the escort departs.",
+  },
+  {
+    q: "What if I have a complaint about the service?",
+    a: "Contact us immediately via phone or WhatsApp. We take all complaints seriously and resolve them within 24 hours. Client satisfaction is our priority.",
+  },
+  {
+    q: "Do you provide service outside major cities?",
+    a: "Yes. We cover 90+ cities across India including tier-2 and tier-3 cities. Call us to check availability in your specific location.",
+  },
+  {
+    q: "Can I contact you for bulk or corporate bookings?",
+    a: "Yes. For multiple bookings or special arrangements, contact us via WhatsApp. We offer customized packages for special events and occasions.",
+  },
+  {
+    q: "Is there an email address for contact?",
+    a: "Yes. You can email us at contact@girlbests.in. However, for faster response, we recommend calling or WhatsApp at +91-7061819139.",
+  },
+  {
+    q: "What languages does your support team speak?",
+    a: "Our support team speaks Hindi and English fluently. We can assist clients in both languages for bookings and queries across India.",
+  },
 ];
 
 export default function ContactPage() {
@@ -147,11 +199,11 @@ export default function ContactPage() {
         </div>
 
         {/* FAQ */}
-        <div className="bg-outer rounded-xl p-6 mt-8">
-          <h2 className="text-xl font-bold text-[#ff9900] mb-6">Booking FAQ</h2>
-          <div className="space-y-4">
+        <div className="mt-8">
+          <h2 className="text-xl font-bold text-[#ff9900] mb-6 text-center">Booking FAQ</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {contactFaqs.map(({ q, a }) => (
-              <div key={q} className="border-b border-[#5e0707]/40 pb-4 last:border-0 last:pb-0">
+              <div key={q} className="bg-outer rounded-xl p-5">
                 <h3 className="text-white font-bold text-sm mb-1">{q}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{a}</p>
               </div>
