@@ -55,6 +55,34 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "CCBot",
         allow: "/",
       },
+      {
+        userAgent: "Applebot-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "cohere-ai",
+        allow: "/",
+      },
+      {
+        userAgent: "Meta-ExternalAgent",
+        allow: "/",
+      },
+      {
+        userAgent: "YouBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Amazonbot",
+        allow: "/",
+      },
+      {
+        userAgent: "PhindBot",
+        allow: "/",
+      },
+      {
+        userAgent: "DeepSeekBot",
+        allow: "/",
+      },
     ],
     sitemap: `${siteConfig.baseUrl}/sitemap.xml`,
   };
