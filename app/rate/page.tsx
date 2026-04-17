@@ -233,6 +233,32 @@ export default function RatePage() {
           </div>
         </div>
 
+        {/* SEO Content */}
+        <div className="mt-10">
+          <h2 className="text-xl font-bold text-[#ff9900] mb-4 text-center">Call Girl Rates & Pricing Guide — Girlbests</h2>
+          <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+            <p>
+              At Girlbests, we believe in <strong className="text-white">transparent and fair pricing</strong> with no hidden charges, no advance payments and no surprise fees. Our call girl rates are competitive across all 90+ cities in India and vary based on the escort category, duration of booking and your location. Every rate displayed on this page is the actual amount you pay — cash only, at the time of service.
+            </p>
+            <p>
+              Our pricing structure starts from <strong className="text-white">₹3,999 for college call girls</strong> (1 to 2 hours), making quality companionship accessible to a wide range of budgets. <strong className="text-white">Independent escorts</strong> start from ₹4,999, while premium categories like <strong className="text-white">Russian and foreign model escorts</strong> begin at ₹14,999. VIP high-profile escorts, including models, actresses and celebrity companions, are available from ₹9,999 for short-time bookings.
+            </p>
+
+            <h3 className="text-lg font-bold text-white pt-1">Understanding Booking Durations</h3>
+            <p>
+              We offer flexible booking durations to suit every need. <strong className="text-white">Short-time bookings</strong> (1 to 2 hours) are perfect for quick companionship. <strong className="text-white">Extended bookings</strong> (3 to 4 hours) offer more relaxed, unhurried experiences at discounted rates. <strong className="text-white">Full-night packages</strong> (8 to 10 hours) provide the best value and include dinner dates, overnight stays and morning companionship. Longer durations always get better per-hour rates.
+            </p>
+
+            <h3 className="text-lg font-bold text-white pt-1">Cash Payment Only — No Digital Trail</h3>
+            <p>
+              Girlbests operates on a strict <strong className="text-white">cash-only payment</strong> model. We do not accept UPI, credit cards, bank transfers or any digital payment method. This policy exists to protect your privacy — no transaction records, no statements, no digital footprint. You pay in cash directly to the escort upon arrival. We never ask for advance deposits or booking fees, making every transaction completely risk-free.
+            </p>
+            <p>
+              Rates may vary slightly between cities and during peak demand periods (weekends, holidays, late nights). The final rate is always confirmed before the escort departs for your location, so there are no surprises. For the most accurate and up-to-date pricing, contact us directly at <strong className="text-white">+91-{siteConfig.phone}</strong>.
+            </p>
+          </div>
+        </div>
+
         {/* Rate FAQ (ASO + VSO) */}
         <div className="mt-8">
           <h2 className="text-xl font-bold text-[#ff9900] mb-6 text-center">

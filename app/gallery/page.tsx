@@ -206,6 +206,31 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* SEO Content */}
+      <section className="bg-outer py-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Genuine Escort Photo Gallery — 100% Real Images
+          </h2>
+          <div className="space-y-5 text-gray-300 text-sm leading-relaxed">
+            <p>
+              Welcome to the <strong className="text-white">Girlbests photo gallery</strong> — a curated collection of genuine, verified images of our escort companions from across India. Every photo displayed in this gallery is <strong className="text-white">100% authentic and unedited</strong>. We do not use stock photos, borrowed images or digitally altered pictures. What you see here is exactly what you get when you book through Girlbests.
+            </p>
+            <p>
+              Our gallery features escorts from all categories — <strong className="text-white">college call girls, independent escorts, Russian models, VIP high-profile companions, housewife escorts</strong> and model escorts. Browse through the images to find the companion that matches your preference. Each photo represents a real, verified escort who is currently active and available for booking in her listed city and area.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Our Photo Verification Process</h3>
+            <p>
+              Every image in our gallery goes through a strict 3-step verification process. First, our local team meets the escort in person to verify identity. Second, we capture or verify the photos to ensure they are genuine and recent. Third, we cross-check the photos against the actual appearance before any escort is dispatched to a client. This rigorous process is why Girlbests maintains a <strong className="text-white">zero fake-photo complaint</strong> record since 2015.
+            </p>
+            <p>
+              We update our gallery regularly as new escorts join and profiles are refreshed. If you see someone you like, act quickly — popular escorts get booked fast, especially on weekends and holidays. To book any escort from this gallery, call or WhatsApp us at <strong className="text-white">+91-{siteConfig.phone}</strong> and mention the photo or description. Our team will confirm availability and arrange the booking within minutes.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <script
         type="application/ld+json"

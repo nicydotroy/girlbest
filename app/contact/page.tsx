@@ -198,6 +198,32 @@ export default function ContactPage() {
           </p>
         </div>
 
+        {/* SEO Content */}
+        <div className="mt-10">
+          <h2 className="text-xl font-bold text-[#ff9900] mb-4 text-center">How to Contact & Book a Call Girl at Girlbests</h2>
+          <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+            <p>
+              Contacting Girlbests for a booking is quick, simple and 100% confidential. We are available <strong className="text-white">24 hours a day, 7 days a week</strong> across all 90+ cities in India. Whether you prefer a phone call, WhatsApp message or email — our dedicated booking team responds within minutes to help you find the perfect companion.
+            </p>
+            <p>
+              To make a booking, simply call or WhatsApp us at <strong className="text-white">+91-{siteConfig.phone}</strong> or our alternate number <strong className="text-white">+91-{siteConfig.whatsapp2}</strong>. Share your city, area, preferred escort type (college girl, independent, Russian, VIP, housewife) and your budget. Our team will share verified profiles with genuine photos for you to choose from. Once confirmed, the escort arrives at your hotel, residence or preferred location within 30 to 60 minutes.
+            </p>
+
+            <h3 className="text-lg font-bold text-white pt-1">What to Share When You Contact Us</h3>
+            <p>
+              For the fastest booking experience, share the following details: your <strong className="text-white">city and area</strong>, <strong className="text-white">escort category preference</strong>, your <strong className="text-white">budget range</strong>, and <strong className="text-white">preferred timing</strong> (day or night, short-time or full-night). Our team handles the rest — profile matching, confirmation and dispatch — so you can sit back and wait for your companion to arrive.
+            </p>
+
+            <h3 className="text-lg font-bold text-white pt-1">100% Private & Secure Communication</h3>
+            <p>
+              We never store your phone number, chat history or personal details after the booking is completed. All conversations on WhatsApp and calls are treated as strictly confidential. We do not share client information with any third party under any circumstances. Your privacy is not just a promise — it is our core policy backed by a decade of zero data breaches and a trusted reputation across India.
+            </p>
+            <p>
+              For email enquiries, write to us at <strong className="text-white">{siteConfig.email}</strong>. Email is best for corporate bookings, event companions, travel escort enquiries and custom requests. We typically respond to emails within 2 to 4 hours. For urgent bookings, we recommend calling or WhatsApp for an instant response.
+            </p>
+          </div>
+        </div>
+
         {/* FAQ */}
         <div className="mt-8">
           <h2 className="text-xl font-bold text-[#ff9900] mb-6 text-center">Booking FAQ</h2>

@@ -311,6 +311,41 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
+      {/* SEO Content */}
+      <section className="bg-outer py-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Best Call Girl Service in {city.name} — Girlbests
+          </h2>
+          <div className="space-y-5 text-gray-300 text-sm leading-relaxed">
+            <p>
+              Looking for the most trusted <strong className="text-white">call girl service in {city.name}</strong>? Girlbests is {city.name}&apos;s leading escort platform with hundreds of verified call girls available 24 hours a day, 7 days a week. We cover every major locality in {city.name} — from popular commercial areas to residential neighborhoods — ensuring that a genuine, verified escort can reach your location within 30 to 60 minutes of booking.
+            </p>
+            <p>
+              Our {city.name} escort service has been operating since 2015 and has served thousands of satisfied clients in the {city.state} region. Every escort listed for {city.name} is personally verified by our local team — genuine photos, real profiles and accurate descriptions guaranteed. We maintain a <strong className="text-white">4.8/5 satisfaction rating</strong> in {city.name} with our zero-complaints policy ensuring a professional experience every time.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Types of Call Girls in {city.name}</h3>
+            <p>
+              In {city.name}, we offer <strong className="text-white">college call girls</strong> starting from ₹3,999 — young, educated and well-mannered companions. <strong className="text-white">Independent escorts</strong> from ₹4,999 offer flexible scheduling and personalized service. For a premium experience, our <strong className="text-white">Russian and foreign model escorts</strong> in {city.name} start from ₹14,999. <strong className="text-white">VIP high-profile escorts</strong> including models and celebrity companions are available from ₹9,999. We also have housewife escorts, model escorts and air hostess companions available across {city.name}.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">How to Book an Escort in {city.name}</h3>
+            <p>
+              Booking a call girl in {city.name} is simple and discreet. Call or WhatsApp <strong className="text-white">+91-{siteConfig.phone}</strong> with your area in {city.name}, preferred escort type and budget. We share verified profiles and photos instantly. Once you confirm, the escort reaches your hotel, residence or any location in {city.name} within 30 to 60 minutes. <strong className="text-white">Cash payment only</strong> — no digital trail, no advance deposits, completely risk-free.
+            </p>
+            <p>
+              Whether you need a short-time companion for 1 to 2 hours, a dinner date partner or a full-night booking of 8 to 10 hours — our {city.name} escorts accommodate every requirement. Service is available at all major hotels, guest houses and private residences throughout {city.name} and its surrounding areas. All bookings are 100% confidential with our strict no-disclosure policy protecting your identity.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Why Choose Girlbests in {city.name}</h3>
+            <p>
+              Girlbests stands out in {city.name} with <strong className="text-white">100% verified profiles</strong>, transparent pricing, 24/7 availability and a decade of trusted service. Unlike other platforms that use fake photos and bait-and-switch tactics, we guarantee that every escort looks exactly like their profile picture. Our cash-only payment model eliminates financial risk and ensures total privacy. With dedicated customer support and a zero-tolerance policy for complaints, Girlbests is the safest choice for escort service in {city.name}, {city.state}.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ (ASO + VSO) */}
       <section
         aria-label={`FAQ about call girl service in ${city.name}`}

@@ -216,6 +216,27 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* SEO Content */}
+          <div className="mb-10">
+            <h2 className="text-xl font-bold text-[#ff9900] mb-4 text-center">Why Millions Trust Girlbests</h2>
+            <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+              <p>
+                Since 2015, <strong className="text-white">Girlbests</strong> has grown from a single-city escort service to India&apos;s most trusted platform covering <strong className="text-white">90+ cities and 888+ areas</strong>. Our journey has been built on three pillars — <strong className="text-white">genuine profiles, total privacy and professional service</strong>. We have served over 1 lakh clients with a 4.8/5 satisfaction rating and a zero-complaints policy that sets us apart in the industry.
+              </p>
+              <p>
+                Our team comprises experienced professionals dedicated to providing a safe and seamless escort experience. From our booking coordinators who match you with the right companion, to our verification team that screens every escort — every member of the Girlbests team is committed to excellence. We operate with a clear code of conduct that ensures respect, safety and professionalism at every step.
+              </p>
+
+              <h3 className="text-lg font-bold text-white pt-1">Our Commitment to Safety & Privacy</h3>
+              <p>
+                Safety is non-negotiable at Girlbests. Every escort is a <strong className="text-white">verified adult aged 18+</strong>. All interactions are between consenting adults. We accept <strong className="text-white">cash payment only</strong> to eliminate any digital trail. Client data is never stored, shared or sold. Our decade-long record of <strong className="text-white">zero data breaches and zero safety incidents</strong> is our strongest credential.
+              </p>
+              <p>
+                Whether you are a first-time client exploring companion services or a long-time patron — Girlbests offers the same trustworthy, discreet experience. Our customer support is available 24/7 to address any questions, concerns or special requests. We believe that trust is earned through consistency, and every booking reinforces the reputation we have built over the years.
+              </p>
+            </div>
+          </div>
+
           {/* FAQ */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-[#ff9900] mb-6 text-center">

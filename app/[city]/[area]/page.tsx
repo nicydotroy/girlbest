@@ -298,6 +298,36 @@ export default async function AreaPage({ params }: Props) {
         </div>
       </section>
 
+      {/* SEO Content */}
+      <section className="bg-outer py-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Call Girl Service in {area.name}, {city.name}
+          </h2>
+          <div className="space-y-5 text-gray-300 text-sm leading-relaxed">
+            <p>
+              Find verified <strong className="text-white">call girls near {area.name}, {city.name}</strong> with Girlbests — the most trusted escort service platform in {city.state}. We have genuine, verified escorts available in and around {area.name} who can reach your location within 30 to 60 minutes. Whether you are staying at a hotel, guest house or private residence near {area.name} — our outcall service covers your exact area.
+            </p>
+            <p>
+              Our {area.name} escort service is backed by {city.name}&apos;s strongest verification process. Every escort profile is personally checked by our local team for photo authenticity, identity verification and service quality. When you book a call girl near {area.name} through Girlbests, you get exactly what you see — <strong className="text-white">100% genuine photos</strong>, accurate descriptions and professional companionship.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Escort Categories Near {area.name}</h3>
+            <p>
+              Near {area.name}, {city.name}, we offer <strong className="text-white">college call girls</strong> from ₹3,999, <strong className="text-white">independent escorts</strong> from ₹4,999, <strong className="text-white">Russian and foreign models</strong> from ₹14,999, and <strong className="text-white">VIP high-profile companions</strong> from ₹9,999. Housewife escorts and model escorts are also available. All escorts are verified adults aged 18+ and offer both incall and outcall services in the {area.name} area.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Book a Call Girl Near {area.name}</h3>
+            <p>
+              Call or WhatsApp <strong className="text-white">+91-{siteConfig.phone}</strong> and mention {area.name}, {city.name} as your location. We will share matching verified profiles within minutes. Choose your preferred escort, confirm the booking and she will arrive at your doorstep. <strong className="text-white">Cash payment only</strong> — no advance, no UPI, no digital records. Available 24/7 including weekends and holidays.
+            </p>
+            <p>
+              Girlbests provides the safest and most private escort experience near {area.name}. Our zero-disclosure policy means your identity is never recorded or shared. With a decade of trusted service in {city.name}, transparent pricing and a zero-complaints track record — Girlbests is the clear choice for escort service in {area.name} and surrounding areas of {city.name}.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ (ASO + VSO) */}
       <section
         aria-label={`FAQ about escort service near ${area.name}`}

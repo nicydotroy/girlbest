@@ -419,6 +419,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SEO Content ──────────────────────────────────────────── */}
+      <section className="bg-outer py-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            India&apos;s Most Trusted Call Girl Service — Girlbests
+          </h2>
+          <div className="space-y-5 text-gray-300 text-sm leading-relaxed">
+            <p>
+              Welcome to <strong className="text-white">Girlbests</strong> — India&apos;s premier escort service platform connecting you with over 1000 verified call girls across 90+ cities. Since 2015, we have been the most trusted name in the escort industry, serving over 1 lakh satisfied clients with our commitment to safety, privacy and genuine experiences. Whether you are looking for a college call girl, an independent escort, a Russian model or a VIP high-profile companion — Girlbests is your one-stop destination.
+            </p>
+            <p>
+              Our platform covers every major city in India — from <strong className="text-white">Delhi, Mumbai, Bangalore and Hyderabad</strong> to Kolkata, Chennai, Pune, Ahmedabad, Jaipur and Lucknow. We also serve tier-2 cities like Indore, Bhopal, Nagpur, Patna, Ranchi, Dehradun and Chandigarh. Each city has dedicated area-level pages with escorts available within 30 to 60 minutes of your call. With <strong className="text-white">888+ area pages</strong> across India, you can find a verified escort near your exact location.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Why Girlbests Is the Best Escort Service in India</h3>
+            <p>
+              What separates Girlbests from other escort platforms is our rigorous verification process. Every escort on our platform undergoes personal identity verification, photo authentication and background screening before being listed. We guarantee that every photo on our website is genuine — no fake images, no misleading descriptions. Our <strong className="text-white">zero-complaints policy</strong> and 4.8/5 client satisfaction rating are proof of our commitment to quality.
+            </p>
+            <p>
+              Privacy is our top priority. We accept <strong className="text-white">cash payment only</strong> — no UPI, no credit cards, no digital trail. Your identity remains completely anonymous. We never store client data, never share information with third parties and maintain a strict zero-disclosure policy. This is why clients trust us for repeat bookings across India.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Types of Call Girls Available at Girlbests</h3>
+            <p>
+              We offer a wide range of escort categories to match every preference and budget. <strong className="text-white">College call girls</strong> starting from ₹3,999 are young, educated and well-mannered companions perfect for a casual outing or private companionship. <strong className="text-white">Independent escorts</strong> from ₹4,999 offer flexible services and manage their own schedules. <strong className="text-white">Russian and foreign model escorts</strong> from ₹14,999 are the premium choice for those seeking an exotic experience. <strong className="text-white">VIP high-profile escorts</strong> include models, actresses and celebrity companions starting from ₹9,999.
+            </p>
+            <p>
+              We also offer <strong className="text-white">housewife escorts</strong> from ₹4,999 — experienced and mature companions for those who prefer a more intimate, personal connection. <strong className="text-white">Model escorts</strong> and <strong className="text-white">air hostess companions</strong> are available for high-end events, dinner dates and overnight bookings. All categories are available for both incall and outcall services across India.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">How to Book a Call Girl on Girlbests</h3>
+            <p>
+              Booking is simple and takes less than 5 minutes. Call or WhatsApp us at <strong className="text-white">+91-7061819139</strong> with your city, area, preferred escort type and budget. Our booking team, available 24/7, will share verified profiles matching your requirements. Once you confirm, the escort arrives at your hotel, residence or preferred location within 30 to 60 minutes. No advance payment, no registration, no hassle — just call and book.
+            </p>
+            <p>
+              We also have a secondary WhatsApp number <strong className="text-white">+91-9229604907</strong> for faster response during peak hours. Whether it is a short-time booking of 1 to 2 hours, a 4-hour extended session or a full-night 8 to 10 hour package — we accommodate every need. Cancellations are free and can be made anytime before the escort departs. We never ask for deposits or advance payments, making every booking completely risk-free.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#ff9900] pt-2">Safe, Discreet and Professional Escort Service</h3>
+            <p>
+              At Girlbests, safety goes beyond just privacy. Every escort is a verified adult aged 18 and above. All services are between consenting adults. We have dedicated customer support available round the clock to handle any concerns or issues. Our decade-long track record with zero safety incidents and zero data breaches speaks for itself. Whether you are a first-time client or a regular — Girlbests provides the same professional, trustworthy experience every single time.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ (ASO + VSO) ──────────────────────────────────────── */}
       <section
         aria-label="Frequently asked questions about escort service"

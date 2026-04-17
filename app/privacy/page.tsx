@@ -167,6 +167,26 @@ export default function PrivacyPage() {
       </div>
     </section>
 
+      {/* SEO Content */}
+      <section className="bg-outer py-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Your Privacy Is Our Priority
+          </h2>
+          <div className="space-y-5 text-gray-300 text-sm leading-relaxed">
+            <p>
+              At Girlbests, privacy is not just a feature — it is the foundation of our entire service. We understand that clients seeking escort services value discretion above all else. That is why we have built our platform from the ground up with a <strong className="text-white">privacy-first approach</strong> that eliminates digital footprints, protects your identity and ensures zero data retention after every booking.
+            </p>
+            <p>
+              Our <strong className="text-white">cash-only payment policy</strong> means there are no bank statements, no UPI records and no credit card trails linked to our service. We do not require registration, accounts or login — no personal data is ever stored in our systems. Phone numbers and WhatsApp conversations used for booking are not retained after the service is completed. This zero-storage approach has resulted in <strong className="text-white">zero data breaches since 2015</strong>.
+            </p>
+            <p>
+              We also protect escort privacy with equal rigour. Escort identities, personal details and contact information are never shared with clients. All communication is routed through our booking team to maintain a secure barrier. Our privacy practices comply with best-in-class data protection standards and are regularly reviewed to address emerging privacy concerns.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <script
         type="application/ld+json"
