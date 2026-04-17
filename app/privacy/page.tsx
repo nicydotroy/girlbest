@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: "Complete privacy policy for Girlbests escort service. Your privacy is our priority.",
     url: `${siteConfig.baseUrl}/privacy`,
   },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Girlbests",
+    description: "Complete privacy policy for Girlbests escort service. Your privacy is our priority.",
+  },
 };
 
 export default function PrivacyPage() {
@@ -48,7 +53,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="text-gray-500 text-center text-sm mb-10">
-          Last updated: {new Date().getFullYear()}
+          Last updated: April 2026
         </p>
 
         <div className="bg-outer rounded-xl p-6 md:p-8 space-y-6">

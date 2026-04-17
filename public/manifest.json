@@ -1,0 +1,21 @@
+{
+  "name": "Girlbests — No.1 Call Girl Service India",
+  "short_name": "Girlbests",
+  "description": "India's most trusted call girl service. 1000+ verified profiles across 90+ cities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#5e0707",
+  "icons": [
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}

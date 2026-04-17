@@ -198,6 +198,7 @@ export function reviewsSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.baseUrl}/#reviews`,
     name: "Girlbests Escort Service",
     url: siteConfig.baseUrl,
     aggregateRating: {
@@ -205,26 +206,30 @@ export function reviewsSchema() {
       ratingValue: "4.8",
       reviewCount: "3841",
       bestRating: "5",
+      worstRating: "1",
     },
     review: [
       {
         "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         author: { "@type": "Person", name: "Rahul S." },
+        datePublished: "2025-11-15",
         reviewBody:
           "Excellent service. 100% genuine profile, arrived on time. Very professional.",
       },
       {
         "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         author: { "@type": "Person", name: "Arjun M." },
+        datePublished: "2025-12-02",
         reviewBody:
           "Best call girl service I have used. Completely discreet and trustworthy.",
       },
       {
         "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         author: { "@type": "Person", name: "Vikram K." },
+        datePublished: "2026-01-18",
         reviewBody:
           "Great experience. The profile matched exactly. Will use again.",
       },

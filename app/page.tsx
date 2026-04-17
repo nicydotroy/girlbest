@@ -129,8 +129,10 @@ export default function Home() {
                   alt={img.alt}
                   width={400}
                   height={280}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="w-full h-52 object-cover"
                   priority={i === 0}
+                  title={img.alt}
                 />
               </div>
             ))}
@@ -255,9 +257,11 @@ export default function Home() {
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={300}
-                  height={220}
+                  width={400}
+                  height={300}
+                  sizes="(max-width: 640px) 50vw, 33vw"
                   className="w-full h-44 object-cover rounded-xl"
+                  title={img.alt}
                 />
                 <a href={`tel:${siteConfig.phone}`}>📞 Book Now</a>
               </div>

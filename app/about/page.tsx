@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     description: "10+ years, 1 lakh+ happy clients, 1000+ verified profiles across 90+ cities.",
     url: `${siteConfig.baseUrl}/about`,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Girlbests | India's No.1 Escort Service",
+    description: "10+ years, 1 lakh+ happy clients, 1000+ verified profiles across 90+ cities.",
+  },
 };
 
 export default function AboutPage() {

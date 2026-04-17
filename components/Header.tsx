@@ -38,25 +38,7 @@ export default function Header() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-white text-sm font-bold">Follow Us:</span>
-            <a
-              href="https://www.facebook.com/"
-              className="text-white"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              aria-label="Facebook"
-            >
-              f
-            </a>
-            <a
-              href="https://www.instagram.com"
-              className="text-white"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              aria-label="Instagram"
-            >
-              in
-            </a>
+            <span className="text-white text-sm font-bold">24/7 Available</span>
           </div>
         </div>
       </div>

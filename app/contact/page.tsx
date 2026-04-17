@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: "Call or WhatsApp +91-7061819139. Instant booking confirmation. 24/7 available.",
     url: `${siteConfig.baseUrl}/contact`,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Girlbests | Book Call Girl 24/7",
+    description: "Call or WhatsApp +91-7061819139. Instant booking confirmation. 24/7 available.",
+  },
 };
 
 const contactFaqs = [

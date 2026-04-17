@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: "Complete transparent escort rate list. Starting ₹3,999. All types covered.",
     url: `${siteConfig.baseUrl}/rate`,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Call Girl Rates 2026 | Escort Price List | Girlbests",
+    description: "Complete transparent escort rate list. Starting ₹3,999. All types covered.",
+  },
 };
 
 const rateFaqs = [

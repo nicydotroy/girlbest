@@ -149,8 +149,10 @@ export default async function CityPage({ params }: Props) {
                   alt={heroAlts[i](city.name)}
                   width={400}
                   height={280}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="w-full h-52 object-cover"
                   priority={i === 0}
+                  title={heroAlts[i](city.name)}
                 />
                 <a href={`tel:${siteConfig.phone}`}>📞 Book Now</a>
               </div>
@@ -214,9 +216,11 @@ export default async function CityPage({ params }: Props) {
                 <Image
                   src={src}
                   alt={`${galleryAlts[i] || "Verified escort"} in ${city.name}`}
-                  width={220}
-                  height={180}
+                  width={400}
+                  height={350}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   className="w-full h-36 object-cover rounded-xl"
+                  title={`${galleryAlts[i] || "Verified escort"} in ${city.name}`}
                 />
                 <a href={`tel:${siteConfig.phone}`}>📞 Book</a>
               </div>

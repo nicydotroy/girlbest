@@ -4,9 +4,11 @@
 import { useEffect, useState } from "react";
 
 export default function AgeVerification() {
-  const [show, setShow] = useState<boolean | null>(null);
+  const [show, setShow] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const verified = localStorage.getItem("ageVerified") === "true";
     setShow(!verified);
   }, []);
@@ -20,7 +22,7 @@ export default function AgeVerification() {
     window.location.href = "https://www.google.com";
   }
 
-  if (!show) return null;
+  if (!mounted || !show) return null;
 
   return (
     <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-[99999]">

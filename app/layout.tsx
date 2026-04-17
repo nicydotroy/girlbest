@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -8,7 +9,13 @@ import FloatingButtons from "@/components/FloatingButtons";
 import { siteConfig } from "@/lib/config";
 import { organizationSchema, webSiteSchema } from "@/lib/schema";
 
-const geist = Geist({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], display: "swap" });
+
+export const viewport: Viewport = {
+  themeColor: "#5e0707",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
@@ -23,7 +30,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
     siteName: "Girlbests",
@@ -31,7 +44,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Girlbests — No.1 Call Girl Service India",
@@ -42,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "No.1 Call Girl Service in India | Girlbests",
     description: siteConfig.defaultDescription,
-    images: ["/images/logo.jpg"],
+    images: ["/images/og-image.jpg"],
   },
   verification: {
     google: "MX8A9CR3qdNYnltT9p9K3ZRViMg4e5GSXKM_10BFplo",
@@ -52,6 +65,13 @@ export const metadata: Metadata = {
     languages: {
       "en-IN": siteConfig.baseUrl,
     },
+  },
+  icons: {
+    icon: [
+      { url: "/images/favicon.ico", sizes: "any" },
+      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/images/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 
@@ -66,29 +86,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/favicon.ico" />
-        <meta name="theme-color" content="#5e0707" />
         <meta name="geo.region" content="IN" />
         <meta name="geo.placename" content="India" />
         <meta name="ICBM" content="20.5937, 78.9629" />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gtag}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${siteConfig.gtag}');`,
-          }}
-        />
-        <noscript>
-          <img
-            src={`https://www.googletagmanager.com/ns.html?id=${siteConfig.gtag}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            alt=""
-          />
-        </noscript>
+        <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -104,6 +105,13 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <FloatingButtons />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gtag}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${siteConfig.gtag}');`}
+        </Script>
       </body>
     </html>
   );

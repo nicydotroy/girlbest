@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     url: `${siteConfig.baseUrl}/gallery`,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Call Girls Photo Gallery | Girlbests",
+    description: "Browse genuine photos of 1000+ verified escorts available across 90+ cities in India.",
+  },
 };
 
 const galleryAlts = [
@@ -54,11 +59,32 @@ export default function GalleryPage() {
     { name: "Photo Gallery", url: `${siteConfig.baseUrl}/gallery` },
   ]);
 
+  const jsonLdImageGallery = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Call Girls Photo Gallery — Girlbests",
+    description: "Browse genuine photos of 1000+ verified escorts available across 90+ cities in India.",
+    url: `${siteConfig.baseUrl}/gallery`,
+    image: allImages.slice(0, 20).map((src, i) => ({
+      "@type": "ImageObject",
+      url: `${siteConfig.baseUrl}${src}`,
+      name: galleryAlts[i] || `Verified escort profile ${i + 1}`,
+      description: galleryAlts[i] || `Verified escort profile ${i + 1} available at Girlbests India`,
+      width: "400",
+      height: "350",
+      contentUrl: `${siteConfig.baseUrl}${src}`,
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdImageGallery) }}
       />
 
       {/* Breadcrumb Nav */}
@@ -89,10 +115,13 @@ export default function GalleryPage() {
               <div key={i} className="img-box">
                 <Image
                   src={src}
-                  alt={galleryAlts[i] || `Verified escort profile ${i + 1}`}
-                  width={240}
-                  height={200}
+                  alt={galleryAlts[i] || `Verified escort profile ${i + 1} — Girlbests India`}
+                  width={400}
+                  height={350}
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                   className="w-full h-40 object-cover rounded-xl"
+                  loading={i < 10 ? "eager" : "lazy"}
+                  title={galleryAlts[i] || `Verified escort profile ${i + 1}`}
                 />
                 <a href={`tel:${siteConfig.phone}`}>📞 Book Now</a>
               </div>
